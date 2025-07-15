@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 64px 24px;
+  background-color: #ecf2f8;
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  width: 327px;
+}
+
+.card > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content {
+  padding: 32px 30px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content header h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  line-height: 130%;
+  letter-spacing: 0.015625rem;
+  font-weight: bold;
+  color: #48556a;
+}
+
+.content header p {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.000975rem;
+  font-weight: 500;
+  color: #6e8098;
+}
+
+.content footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 32px;
+      grid-template-columns: 40px 1fr 32px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "avatar name button" "avatar time button";
+}
+
+.content footer > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: avatar;
+}
+
+.content footer h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.000975rem;
+  font-weight: bold;
+  color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: name;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.content footer time {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.000975rem;
+  font-weight: 500;
+  color: #9daec2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: time;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.content footer button {
+  cursor: pointer;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: button;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+  border: none;
+}
+
+.content footer button.active {
+  background-color: #6e8098;
+}
+
+.content footer button.active svg path {
+  fill: #ffffff;
+}
+
+.share {
+  display: none;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 0;
+  margin: -108px -30px -16px;
+  padding: 22px 30px;
+  background-color: #48556a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: show 0.3s forwards;
+          animation: show 0.3s forwards;
+}
+
+.share.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.share span {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.203125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #9daec2;
+  margin-right: 24px;
+}
+
+.share button {
+  margin-left: auto;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #6e8098;
+  border: none;
+}
+
+.share button svg path {
+  fill: #ffffff;
+}
+
+.share ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.share ul li {
+  cursor: pointer;
+  height: 20px;
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 227px 80px;
+  }
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 730px;
+    width: 100%;
+  }
+  .card > img {
+    border-radius: 10px 0px 0px 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+    min-width: 229px;
+    max-width: 285px;
+    height: unset;
+  }
+  .card .content {
+    position: relative;
+  }
+  .share {
+    border-radius: 10px;
+    padding: 18px 38px;
+    margin: 0;
+    position: absolute;
+    right: -78px;
+    bottom: 85px;
+  }
+  .share button {
+    display: none;
+  }
+  .share:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #48556a;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+    bottom: -10px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
