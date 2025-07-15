@@ -1,6 +1,7 @@
 const shareButton = document.getElementById("shareBTN");
-const shareCard = document.getElementById("share_card");
 shareButton?.addEventListener("click", handleToggleShareCard);
+
+const shareCard = document.getElementById("share_card");
 
 const hideBTN = document.getElementById("hideBTN");
 hideBTN?.addEventListener("click", handleToggleShareCard);
