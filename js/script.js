@@ -1,17 +1,23 @@
 const shareButton = document.getElementById("shareBTN");
-if (shareButton) { 
-    shareButton.addEventListener("click", handleToggleShareCard);
-}
+const shareCard = document.getElementById("share_card");
+shareButton?.addEventListener("click", handleToggleShareCard);
 
 const hideBTN = document.getElementById("hideBTN");
-if (hideBTN) {
-  hideBTN.addEventListener("click", handleToggleShareCard);
-}
+hideBTN?.addEventListener("click", handleToggleShareCard);
 
-function handleToggleShareCard() { 
+function handleToggleShareCard() {
+  shareButton?.classList?.toggle("active");
 
-  shareButton?.classList?.toggle('active')
-  const shareCard = document.getElementById("share_card");
   shareCard?.classList?.toggle("active");
-
 }
+
+document.addEventListener("click", (event) => {
+  const hideShareCard = !(
+    shareButton.contains(event.target) || shareCard.contains(event.target)
+  );
+  console.log(hideShareCard);
+  if (hideShareCard) {
+    shareButton?.classList?.remove("active");
+    shareCard?.classList?.remove("active");
+  }
+});
