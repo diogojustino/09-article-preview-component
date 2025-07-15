@@ -57,7 +57,7 @@ ul {
   width: 327px;
 
   & > img {
-    border-top-left-radius:  10px;
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 200px;
     object-fit: cover;
@@ -124,12 +124,12 @@ ul {
       background-color: $color-grey-200;
       border: none;
 
-      &.active{
-    background-color: $color-grey-500;
+      &:where(.active, :hover) {
+        background-color: $color-grey-500;
 
-    svg path{
-      fill: $color-white;
-    }
+        svg path {
+          fill: $color-white;
+        }
       }
     }
   }
@@ -139,7 +139,7 @@ ul {
   display: none;
   border-radius: 0px 0px 10px 10px;
   opacity: 0;
-  &.active{
+  &.active {
     display: flex;
   }
   margin: -108px -30px -16px;
@@ -160,11 +160,11 @@ ul {
     color: $color-white;
     background-color: $color-grey-500;
     border: none;
-    svg path{
+    svg path {
       fill: $color-white;
     }
   }
-  
+
   align-items: center;
   ul {
     display: flex;
@@ -179,7 +179,7 @@ ul {
   animation: show 0.3s forwards;
 
   @keyframes show {
-    to{
+    to {
       opacity: 1;
     }
   }
@@ -209,7 +209,7 @@ ul {
     }
   }
 
-  .share{
+  .share {
     border-radius: 10px;
     padding: 18px 38px;
     margin: 0;
@@ -217,12 +217,12 @@ ul {
     // z-index: ;
     right: -78px;
     bottom: 85px;
-    button{
+    button {
       display: none;
     }
 
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       width: 20px;
       height: 20px;
       display: block;
@@ -234,5 +234,3 @@ ul {
     }
   }
 }
-
-

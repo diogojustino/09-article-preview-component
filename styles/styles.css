@@ -146,11 +146,11 @@ ul {
   border: none;
 }
 
-.content footer button.active {
+.content footer button:where(.active, :hover) {
   background-color: #6e8098;
 }
 
-.content footer button.active svg path {
+.content footer button:where(.active, :hover) svg path {
   fill: #ffffff;
 }
 
@@ -264,7 +264,7 @@ ul {
     display: none;
   }
   .share:after {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     display: block;
