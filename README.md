@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Link](https://08-meet-landing-page.vercel.app/))
+- Live Site URL: [Link](https://09-article-preview-component.vercel.app/)
 
 ## My process
 
